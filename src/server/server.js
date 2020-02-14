@@ -16,4 +16,4 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '../views')));
 
 // puerto
-app.listen(3005, console.log('escuchando en el 3005'));
+app.listen(3000, console.log('escuchando en el 3000'));
