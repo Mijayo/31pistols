@@ -1,0 +1,26 @@
+{
+  "name": "31pistols",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/server/server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mijayo/31pistols.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mijayo/31pistols/issues"
+  },
+  "homepage": "https://github.com/Mijayo/31pistols#readme",
+  "description": ""
+}
