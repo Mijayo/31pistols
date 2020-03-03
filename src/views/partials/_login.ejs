@@ -1,46 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-</html>
-
 <head>
-    <meta charset="utf-8">
-    <title>NODEJS CON EJS</title>
-    <!-- Favicons -->
-    <link href="../img/favicon.png" rel="icon">
-    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
-    <!-- BOOTSTRAP CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- SOFT LAND PAGE CSS -->
-    <link rel="stylesheet" href="../css/softLand.css">
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Staatliches|Poppins:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="../../vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="../../vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
-    <link href="../../vendor/aos/aos.css" rel="stylesheet">
-    <link href="../../vendor/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <!-- Vendor JS Files -->
-    <script src="../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../vendor/jquery/jquery-migrate.min.js"></script>
-    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../vendor/easing/easing.min.js"></script>
-    <script src="../../vendor/php-email-form/validate.js"></script>
-    <script src="../../vendor/sticky/sticky.js"></script>
-    <script src="../../vendor/aos/aos.js"></script>
-    <script src="../../vendor/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="../../js/main.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
 </head>
-
 
 <style>
     body {
@@ -119,7 +84,7 @@
         /* Full height */
         overflow: auto;
         /* Enable scroll if needed */
-        /* background-color: #474e5d; */
+        background-color: #474e5d;
         padding-top: 50px;
     }
     /* Modal Content/Box */
@@ -172,13 +137,53 @@
 </style>
 
 <body>
-    <div class="site-wrap">
 
-        <div class="site-mobile-menu site-navbar-target">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icofont-close js-menu-toggle"></span>
+    <h2>Modal Signup Form</h2>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
                 </div>
             </div>
-            <div class="site-mobile-menu-body"></div>
-        </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
