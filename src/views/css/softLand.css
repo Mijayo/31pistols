@@ -757,6 +757,14 @@ figure figcaption {
   # Nav
   --------------------------------------------------------------*/
 
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #2d71a1 !important;
+}
+
 .site-navbar {
     margin-bottom: 0px;
     z-index: 1999;
@@ -767,7 +775,7 @@ figure figcaption {
 
 .site-navbar .site-logo {
     position: relative;
-    font-size: 24px;
+    font-size: 20px !important;
 }
 
 .site-navbar .site-logo a {
